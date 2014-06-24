@@ -1,10 +1,10 @@
 pyVmomi-Client-samples
 ======================
 
-Functions using pyVmomi library to manage VMware virtual machines - includes code dealing with distributed switch. 
+Utility functions using pyVmomi library to manage VMware virtual machines - includes code dealing with distributed switch. 
 
 
-Functions in the pyVM_funcs.py :
+Functions in the pyVM_utils.py :
 
 connect_vc() - Connects to the virtual center and returns a Service Instance object.
 
