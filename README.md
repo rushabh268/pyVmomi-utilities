@@ -1,10 +1,12 @@
 pyVmomi-Client-samples
 ======================
 
-Functions using pyVmomi library to manage VMware virtual machines - includes code dealing with distributed switch.
+Functions using pyVmomi library to manage VMware virtual machines - includes code dealing with distributed switch. 
 
 
 Functions in the pyVM_funcs.py :
+
+connect_vc() - Connects to the virtual center and returns a Service Instance object.
 
 get_obj(content, vimtype, name) - Fetch object from VMware Managed Object Tree based on object name
 
@@ -17,4 +19,8 @@ resetVM(si,content,vmname)
 getVMState(si,content,vmname) - Return the state of the VM.
 
 getmacaddress(si,content,vmname) - Get the mac address of the VM. Assumes a VM with only one VNIC. The mac address can then be passed to other things like foreman.
+
+changeEth0Network(si,content,vmname,targetnet) - Change the port group to which the VNIC is connected.
+
+create_vm(si,content,clustername,datastorename,buildnetwork,vmname) - Create a VM with one ethernet interface and a single virtual disk on the target cluster and datastore.  Once the VM is created you need to use your own OS provisioning methods to install the OS. buildnetwork is the portgroup to which the VM will be connected.
 
