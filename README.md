@@ -22,5 +22,5 @@ getmacaddress(si,content,vmname) - Get the mac address of the VM. Assumes a VM w
 
 changeEth0Network(si,content,vmname,targetnet) - Change the port group to which the VNIC is connected.
 
-create_vm(si,content,clustername,datastorename,buildnetwork,vmname) - Create a VM with one ethernet interface and a single virtual disk on the target cluster and datastore.  Once the VM is created you need to use your own OS provisioning methods to install the OS. buildnetwork is the portgroup to which the VM will be connected.
+create_vm(si,content,clustername,datastorename,buildnetwork,vmname) - Create (not Clone) a VM with one ethernet interface and a single virtual disk on the target cluster and datastore.  Once the VM is created you need to use your own OS provisioning methods to install the OS. buildnetwork is the portgroup to which the VM will be connected.
 
